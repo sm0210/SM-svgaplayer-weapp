@@ -1,0 +1,24 @@
+{
+  "name": "svgaplayer-weapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/svgaplayer.weapp.js",
+  "typings": "svgaplayer-weapp.d.ts",
+  "scripts": {
+    "build": "node build.js > ./dist/svgaplayer.weapp.js",
+    "buildProto": "node buildProto.js > ./dist/protobuf.weapp.js",
+    "buildVideo": "node buildVideo.js > ./dist/video.weapp.js",
+    "buildPlayer": "node buildPlayer.js > ./dist/player.weapp.js",
+    "buildRender": "node buildRender.js > ./dist/render.weapp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "miniprogram": "dist",
+  "devDependencies": {
+    "@types/wechat-miniprogram": "^3.3.0",
+    "browserify": "^17.0.0",
+    "tinyify": "^3.0.0",
+    "tsify": "^5.0.4",
+    "typescript": "^4.3.2"
+  }
+}
