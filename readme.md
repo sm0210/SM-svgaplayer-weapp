@@ -6,7 +6,7 @@
 项目基于uniapp需要在微信小程序播放svga文件，uniapp插件市场搜索后确定使用[c-svga](https://ext.dcloud.net.cn/plugin?id=10625)插件播放，该插件底层使用[svgaplayer-weapp](https://github.com/svga/svgaplayer-weapp)插件，但在使用的过程中发现在IOS小程序中当文件过大直接卡顿无法使用，官网[isuse](https://github.com/svga/svgaplayer-weapp/issues/20)也有人提出，至今没有解决，那关键时刻就只能靠自己了。
 
 - **二、源码分析**
-基于小程序架构设计(视图层和逻辑层)是不能作太消耗内存消耗的操作，当深入分析svgaplayer-weapp插件源码分析后，发现吃内存的有两处,如下：
+基于小程序架构设计(视图层和逻辑层)是不建议使用太消耗内存的操作，当深入分析svgaplayer-weapp插件源码分析后，发现吃内存的有两处,如下：
   -  loadWXImage方法中把文件流一帧一帧转成base64(见node_moudle/svgaplayer-weapp/src/player.ts);
   ![loadWXImage](https://upload-images.jianshu.io/upload_images/551421-fbc8ad068ccd9ed2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
