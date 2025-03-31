@@ -69,7 +69,7 @@
     this._update();
   } 
   /**
-   * SM ADD 把图像转成base64
+   * SM ADD 把base64转成img对象
    * @param data 
    * @returns 
    */
