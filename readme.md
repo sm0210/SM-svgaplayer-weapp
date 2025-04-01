@@ -546,5 +546,3 @@ worker.onMessage(async (res) => {
 - 结案陈词
 改动后的代码在IOS中测试已经明显没有卡顿现象能正常使用了，问题解决，完美～～～～
 
-[github获取改动后代码](https://github.com/sm0210/SM-svgaplayer-weapp)
-
