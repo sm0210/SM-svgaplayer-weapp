@@ -19,6 +19,7 @@
   - 需要改c-svga插件中播放svga的代码；
   - 需要改svgaplayer-weapp插件中源码转成base64代码提取到Worker线程中；
   - 需要改svgaplayer-weapp插件drawFrame绘制代码提取到Worker线程中；(**因小程序canvas是基于客户端实现的并且提供了一系列的wx.xxx API操作，但是Worker中又不能使用wx.xxx Api**) 这步就只能放弃；
+  - 读取本地文件增加缓存操作；
 - **四、插件源码改造**
   - svgaplayer-weapp/src/parser.ts增加loadVideoEntity方法，把文件流转成VideoEntity实体类
 ````
