@@ -1,6 +1,7 @@
 - **解决问题相关技术点**:
   - 使用Worker多线程技术；
   - 改动插件源码，提取耗内存操作到Worker中处理；
+  - 压缩svga文件；
 
 - **一、起因**
 项目基于uniapp需要在微信小程序播放svga文件，uniapp插件市场搜索后确定使用[c-svga](https://ext.dcloud.net.cn/plugin?id=10625)插件播放，该插件底层使用[svgaplayer-weapp](https://github.com/svga/svgaplayer-weapp)插件，但在使用的过程中发现在IOS小程序中当文件过大直接卡顿无法使用，官网[isuse](https://github.com/svga/svgaplayer-weapp/issues/20)也有人提出，至今没有解决，那关键时刻就只能靠自己了。
